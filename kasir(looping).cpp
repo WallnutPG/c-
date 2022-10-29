@@ -25,13 +25,14 @@ int main()
         ulang:
         menu();
 
-        cout << "Jumlah Minuman: ";
-        cin >> j; 
+                cout << "Jumlah Minuman : ";
+                cin >> j; 
 
         for (int i = 1; i <= j; i++)
         {
+                cout << endl;
                 cout << "Minuman Ke-" << i << "\n";
-                cout << "Pilih Minuman (A/B/C/D/E): "; 
+                cout << "Pilih Minuman  : "; 
                 cin >> kodeMinuman[i];
                 cout << "Jumlah Minuman : ";
                 cin >> jumlahBeli[i]; 
@@ -81,22 +82,39 @@ int main()
 
         if (jumlahHarga >= 40000)
         {
+                cout << "   Jumlah Harga :                Rp. " << jumlahHarga << endl;
+                cout << "--------------------------------------------";
                 cout<<endl;
+                cout << endl;
                 cout<<"Selamat Anda Mendapatkan Diskon 10%"<<endl;
                 diskon =  0.1 * jumlahHarga;
                 total = jumlahHarga - diskon;
-        } else if (jumlahHarga > 20000 && jumlahHarga < 4000)
+                cout << "Total Pembelian : " << total;
+        } else if (jumlahHarga > 20000 && jumlahHarga < 40000)
         {
+                cout << "   Jumlah Harga :                Rp. " << jumlahHarga << endl;
+                cout << "--------------------------------------------";
                 cout<<endl;
+                cout << endl;
                 cout<<"Selamat Anda Mendapatkan Diskon 5%"<<endl;
                 diskon =  0.05 * jumlahHarga;
                 total = jumlahHarga - diskon;
+                cout << "Total Pembelian : " << total;
         }
         else {
+                cout << "   Jumlah Harga :                Rp. " << jumlahHarga << endl;
+                cout << "--------------------------------------------" << endl;
                 total = jumlahHarga;
+                cout << "Total Pembelian : " << total;
         }
-        
-
-        cout << total;
         cout << endl;
+        cout << "Uang Pembayaran : ";
+        cin >> bayar;
+        kembalian = bayar - total;
+        cout << "Kembalian Anda  : " << kembalian;
+        cout << endl;
+        cout << endl;
+        cout << "Program Created By : WallnutPG" << endl;
+        cout << "Repositories       : https://github.com/WallnutPG" << endl;
+        cout << "THANKYU" << endl;
 }
